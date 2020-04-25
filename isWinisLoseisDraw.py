@@ -34,7 +34,7 @@ def isWin( gameState ):
 
     biasl = False #代表携着的是否有四个连着的0,端点在0列的
     for k in range(6) :#k代表可行的斜线
-        l = 6 - max( 5 - k , k - 0 ) #代表第k个斜线的长度
+        l = 6 -  min( 5 - k , k - 0 ) #代表第k个斜线的长度
         m = 0 
         number_continuuum = 0 #连着0的数量
         if  k < 3 :
@@ -62,7 +62,7 @@ def isWin( gameState ):
     
     biasr = False #代表携着的是否有四个连着的0,端点在6列的
     for k in range(6) :#k代表可行的斜线
-        l = 6 - max( 5 - k , k - 0 ) #代表第k个斜线的长度
+        l = 6 - min( 5 - k , k - 0 ) #代表第k个斜线的长度
         m = 0 
         number_continuuum = 0 #连着0的数量
         if  k < 3 :
@@ -128,7 +128,7 @@ def isLose( gameState ):
 
     biasl = False #代表携着的是否有四个连着的1,端点在0列的
     for k in range(6) :#k代表可行的斜线
-        l = 6 - max( 5 - k , k - 0 ) #代表第k个斜线的长度
+        l = 6 -  min( 5 - k , k - 0 ) #代表第k个斜线的长度
         m = 0 
         number_continuuum = 0 #连着0的数量
         if  k < 3 :
@@ -156,7 +156,7 @@ def isLose( gameState ):
     
     biasr = False #代表携着的是否有四个连着的0,端点在6列的
     for k in range(6) :#k代表可行的斜线
-        l = 6 - max( 5 - k , k - 0 ) #代表第k个斜线的长度
+        l = 6 -  min( 5 - k , k - 0 ) #代表第k个斜线的长度
         m = 0 
         number_continuuum = 0 #连着0的数量
         if  k < 3 :
